@@ -1,39 +1,57 @@
+body{
+	margin: 0;
+}
+
 #wrapper{
 	display: grid;
-	grid-template-rows: 20px 20rem 20px;
+	grid-template-rows: 50px auto 50px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: 
 		"first_header second_header third_header"
 		"main main main"
 		"footer footer footer";
-
 }
 
 #first_header{
+	display: grid;
 	background-color: blue;
 	color: white;
 	grid-area: first_header;
+	text-align: center;
+	align-content: center;
 }
 
 #second_header{
+	display: grid;
 	background-color: red;
 	color: white;
 	grid-area: second_header;
+	text-align: center;
+	align-content: center;
 }
 
 #third_header{
+	display: grid;
 	background-color: green;
 	color: white;
 	grid-area: third_header;
+	text-align: center;
+	align-content: center;
 }		
 
 #main{
+	display: grid;
 	background-color: black;
 	color: white;
 	grid-area: main;
+	text-align: center;
+	align-content: center;
 }
 
 #footer{
+	display: grid;
 	background-color: yellow;
 	grid-area: footer;
+	text-align: center;
+	align-content: center;
 }
