@@ -4,8 +4,8 @@ body{
 
 #wrapper{
 	display: grid;
-	grid-template-rows: 50px auto 50px;
-	grid-template-columns: 50% 1fr 1fr 1fr;
+	grid-template-rows: 75px auto 50px;
+	grid-template-columns: 35% 1fr 1fr 1fr;
 	grid-template-areas: 
 		"img first_header second_header third_header"
 		"main main main main"
@@ -21,11 +21,18 @@ body{
 	align-content: center;
 }
 
-#logo > img {
-	width: 50%;
-	height: 100%;
+#logo{
+	justify-content: center;
+	
+}
+
+#logo > img{
+	height: auto;
+	width: auto;
 	grid-area: img;
 }
+
+
 
 #second_header{
 	display: grid;
