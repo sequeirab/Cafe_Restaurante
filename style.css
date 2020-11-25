@@ -5,11 +5,11 @@ body{
 #wrapper{
 	display: grid;
 	grid-template-rows: 50px auto 50px;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 50% 1fr 1fr 1fr;
 	grid-template-areas: 
-		"first_header second_header third_header"
-		"main main main"
-		"footer footer footer";
+		"img first_header second_header third_header"
+		"main main main main"
+		"footer footer footer footer";
 }
 
 #first_header{
@@ -19,6 +19,12 @@ body{
 	grid-area: first_header;
 	text-align: center;
 	align-content: center;
+}
+
+#logo > img {
+	width: 50%;
+	height: 100%;
+	grid-area: img;
 }
 
 #second_header{
