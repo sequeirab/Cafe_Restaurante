@@ -1,70 +1,108 @@
-body{
-	margin: 0;
+body {
+  margin: 0;
 }
 
-#wrapper{
-	display: grid;
-	grid-template-rows: 75px auto 50px;
-	grid-template-columns: 35% 1fr 1fr 1fr;
-	grid-template-areas: 
-		"img first_header second_header third_header"
-		"main main main main"
-		"footer footer footer footer";
+#wrapper {
+  display: grid;
+  grid-gap: 0.1rem;
+  grid-template-rows: 75px auto auto 50px;
+  grid-template-columns: 35% 1fr 1fr 1fr;
+  grid-template-areas:
+    "img first_header second_header third_header"
+    "main main main main"
+    "about about about about"
+    "mapa email facebook contacto";
 }
 
-#first_header{
-	display: grid;
-	background-color: blue;
-	color: white;
-	grid-area: first_header;
-	text-align: center;
-	align-content: center;
+#first_header {
+  display: grid;
+  background-color: blue;
+  color: white;
+  grid-area: first_header;
+  text-align: center;
+  align-content: center;
 }
 
-#logo{
-	justify-content: center;
-	
+#logo {
+  justify-content: center;
+  padding-left: 10px;
 }
 
-#logo > img{
-	height: auto;
-	width: auto;
-	grid-area: img;
+#logo > img {
+  height: auto;
+  width: auto;
+  grid-area: img;
 }
 
-
-
-#second_header{
-	display: grid;
-	background-color: red;
-	color: white;
-	grid-area: second_header;
-	text-align: center;
-	align-content: center;
+#second_header {
+  display: grid;
+  background-color: red;
+  color: white;
+  grid-area: second_header;
+  text-align: center;
+  align-content: center;
 }
 
-#third_header{
-	display: grid;
-	background-color: green;
-	color: white;
-	grid-area: third_header;
-	text-align: center;
-	align-content: center;
-}		
-
-#main{
-	display: grid;
-	background-color: black;
-	color: white;
-	grid-area: main;
-	text-align: center;
-	align-content: center;
+#third_header {
+  display: grid;
+  background-color: green;
+  color: white;
+  grid-area: third_header;
+  text-align: center;
+  align-content: center;
 }
 
-#footer{
-	display: grid;
-	background-color: yellow;
-	grid-area: footer;
-	text-align: center;
-	align-content: center;
+#main {
+  display: grid;
+  background-color: black;
+  color: white;
+  grid-area: main;
+  text-align: center;
+  align-content: center;
+}
+
+#about {
+  display: grid;
+  grid-area: about;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#mapa {
+  display: grid;
+  grid-area: mapa;
+  text-align: center;
+  align-content: center;
+}
+
+.link_mapa {
+  text-decoration: none;
+  color: black;
+}
+
+#email {
+  display: grid;
+  grid-area: email;
+  text-align: center;
+  align-content: center;
+}
+
+#facebook {
+  display: grid;
+  grid-area: facebook;
+  text-align: center;
+  align-content: center;
+}
+
+#contacto {
+  display: grid;
+  grid-area: contacto;
+  text-align: center;
+  align-content: center;
+}
+
+.map {
+  width: 25rem;
+  height: 10rem;
 }
