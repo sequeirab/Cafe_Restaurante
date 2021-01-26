@@ -1,0 +1,13 @@
+.header {
+  &__logo {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  &__links {
+    text-align: center;
+    :not(:last-child) {
+      padding-right: 10rem;
+    }
+  }
+}
