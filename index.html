@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width">
 	<title>Cafe Brasileiro</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
@@ -10,13 +11,25 @@
 </head>
 
 <body>
-	<header class=".hide-for-mobile header ">
+	<header class="header ">
 		<nav class=" nav container--px flex flex-jc-sb flex-ai-c">
 			<div class="header__logo ">
 				<a href="#"><img src="/images/logo.svg" alt="logo"></a>
 			</div>
 
-			<div class=" header__links">
+			<div class="hide-for-mobile header__links">
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Links</a>
+			</div>
+
+			<div id="hamburgerMenu" class="header__toggle hide-for-desktop">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="menu-block hide">
 				<a href="#">Home</a>
 				<a href="#">About</a>
 				<a href="#">Links</a>

@@ -32,6 +32,7 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+  color: #919191;
 }
 
 .flex {
@@ -58,12 +59,6 @@ a:hover {
           align-items: center;
 }
 
-@media (max-width: 63.9375em) {
-  .hide-for-mobile {
-    background-color: red;
-  }
-}
-
 .header {
   background-color: #a37f2b4d;
 }
@@ -86,8 +81,20 @@ a:hover {
   left: 0;
 }
 
+@media (max-width: 39.9375em) {
+  .header .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 40em) {
+  .header .hide-for-desktop {
+    display: none;
+  }
+}
+
 .header__links {
-  text-align: center;
+  margin-left: 8.1875rem;
 }
 
 .header__links a {
@@ -96,5 +103,47 @@ a:hover {
 
 .header__links :not(:last-child) {
   padding-right: 10rem;
+}
+
+.header__toggle > span {
+  display: block;
+  background-color: black;
+  width: 26px;
+  height: 2px;
+  cursor: pointer;
+}
+
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.menu-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 5.625rem;
+  right: 0;
+  left: 0;
+  margin: 0 3.4375rem;
+  background-color: black;
+  height: auto;
+  text-align: center;
+}
+
+.menu-block > a {
+  margin-bottom: 34px;
+}
+
+.menu-block :first-child {
+  margin-top: 34px;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
