@@ -58,6 +58,12 @@ a:hover {
           align-items: center;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    background-color: red;
+  }
+}
+
 .header {
   background-color: #a37f2b4d;
 }

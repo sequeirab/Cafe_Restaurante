@@ -51,3 +51,9 @@ a:hover {
     align-items: center;
   }
 }
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    background-color: red;
+  }
+}
