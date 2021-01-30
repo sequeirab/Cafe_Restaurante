@@ -1,11 +1,30 @@
 .header {
+  background-color: #a37f2b4d;
+
+  .nav {
+    max-height: 5.625rem;
+  }
+
   &__logo {
+    position: relative;
     width: 10rem;
     height: 10rem;
+
+    img {
+      position: absolute;
+      top: 17%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
   }
 
   &__links {
     text-align: center;
+
+    a {
+      color: rgb(145, 145, 145);
+    }
     :not(:last-child) {
       padding-right: 10rem;
     }

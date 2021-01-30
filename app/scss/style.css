@@ -20,7 +20,12 @@ body {
 }
 
 .container--pall {
-  padding: 4.35rem;
+  padding: 0 2.5rem;
+}
+
+.container--px {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 a,
@@ -53,13 +58,34 @@ a:hover {
           align-items: center;
 }
 
+.header {
+  background-color: #a37f2b4d;
+}
+
+.header .nav {
+  max-height: 5.625rem;
+}
+
 .header__logo {
+  position: relative;
   width: 10rem;
   height: 10rem;
 }
 
+.header__logo img {
+  position: absolute;
+  top: 17%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .header__links {
   text-align: center;
+}
+
+.header__links a {
+  color: #919191;
 }
 
 .header__links :not(:last-child) {

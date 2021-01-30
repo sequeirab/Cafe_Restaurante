@@ -19,7 +19,12 @@ body {
 
 .container {
   &--pall {
-    padding: 4.35rem;
+    padding: 0 2.5rem;
+  }
+
+  &--px {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -31,7 +36,6 @@ a:hover {
 }
 
 //Flex
-
 .flex {
   display: flex;
 
