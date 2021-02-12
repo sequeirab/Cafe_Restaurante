@@ -1,0 +1,14 @@
+.hero {
+  position: relative;
+
+  &__numberText {
+    position: absolute;
+    top: 0;
+  }
+  &__images {
+  }
+  #slide {
+    width: 100%;
+    height: 360px;
+  }
+}

@@ -1,5 +1,6 @@
 const menu = document.getElementById('hamburgerMenu');
 const slide = document.querySelector("#slide");
+const numText =document.querySelector(".hero__numberText");
 let images = [];
 let time = 5000;
 let i = 0;
@@ -7,6 +8,7 @@ let i = 0;
 menu.addEventListener('click', () => {
     const showMenu = document.querySelector('.menu-block');
     showMenu.classList.toggle('hide');
+    stop(changeImg);
 });
 
 
@@ -22,8 +24,10 @@ images[2] = './images/slide3.png';
 
 const changeImg = () => {
     slide.src = images[i];
+    numText.innerHTML = `${i + 1} of ${images.length}`;
+    
     i++;   
-    console.log(i);
+    
     if(i < images.length) {
         setTimeout(changeImg,  time);
     
