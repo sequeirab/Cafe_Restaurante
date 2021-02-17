@@ -46,23 +46,4 @@
       background-color: rgba(0, 0, 0, 0.685);
     }
   }
-  &__dots {
-    text-align: center;
-
-    .dot {
-      display: inline-block;
-      background-color: rgba(0, 0, 0, 0.096);
-      border-radius: 50%;
-      width: 15px;
-      height: 15px;
-
-      &:not(:first-child) {
-        margin-left: 1rem;
-      }
-    }
-
-    .active {
-      background-color: rgba(0, 0, 0, 0.623);
-    }
-  }
 }

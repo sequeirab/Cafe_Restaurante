@@ -197,24 +197,4 @@ a:hover {
 .hero__next:hover {
   background-color: rgba(0, 0, 0, 0.685);
 }
-
-.hero__dots {
-  text-align: center;
-}
-
-.hero__dots .dot {
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.096);
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-}
-
-.hero__dots .dot:not(:first-child) {
-  margin-left: 1rem;
-}
-
-.hero__dots .active {
-  background-color: rgba(0, 0, 0, 0.623);
-}
 /*# sourceMappingURL=style.css.map */
