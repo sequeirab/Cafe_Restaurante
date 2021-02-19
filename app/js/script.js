@@ -30,15 +30,6 @@ images[6] = './images/slide3.png';
 
 const changeImg = () => {
     
-
-
-    slide.src = images[i];
-    numText.innerHTML = `${i + 1} de ${images.length}`;
-   
-   console.log("parte de fora");
-   i++;
-
-
     if (i < images.length) {
         setTimeout(changeImg, time);
 
@@ -47,6 +38,16 @@ const changeImg = () => {
         setTimeout(changeImg, time);
     }
     
+
+
+    slide.src = images[i];
+    numText.innerHTML = `${i + 1} de ${images.length}`;
+   
+   
+   i++;
+
+
+   
     
     
 }
@@ -57,7 +58,7 @@ next.addEventListener("click", () => {
         numText.innerHTML = `${i + 1} de ${images.length}`;
         i++;
     } else {
-        i = 0;
+       return  i = 0;
     } 
 
 })
@@ -69,7 +70,7 @@ prev.addEventListener("click", () => {
         numText.innerHTML = `${i + 1} de ${images.length}`;
         
     } else {
-        i = images.length;
+        return i = images.length;
     } 
 
 })
