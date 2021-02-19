@@ -1,17 +1,17 @@
 const menu = document.getElementById('hamburgerMenu');
 const slide = document.querySelector("#slide");
 const numText = document.querySelector(".hero__numberText");
-const prev = document.querySelector(".hero__prev");
-const next = document.querySelector(".hero__next");
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
 let images = [];
-let time = 5000;
+let time = 10000;
 let i = 0;
-
+let k = i;
 
 menu.addEventListener('click', () => {
     const showMenu = document.querySelector('.menu-block');
     showMenu.classList.toggle('hide');
-    stop(changeImg);
+    
 });
 
 
@@ -30,18 +30,13 @@ images[6] = './images/slide3.png';
 
 const changeImg = () => {
     
-    
+
+
     slide.src = images[i];
     numText.innerHTML = `${i + 1} de ${images.length}`;
-    i++;
    
-    next.addEventListener("click", () => {
-        i++
-        slide.src = images[i];
-        numText.innerHTML = `${i + 1} de ${images.length}`;
-
-        
-    })
+   console.log("parte de fora");
+   i++;
 
 
     if (i < images.length) {
@@ -52,10 +47,32 @@ const changeImg = () => {
         setTimeout(changeImg, time);
     }
     
-
+    
     
 }
 
+next.addEventListener("click", () => {
+    if(i < images.length){
+        slide.src = images[i];
+        numText.innerHTML = `${i + 1} de ${images.length}`;
+        i++;
+    } else {
+        i = 0;
+    } 
+
+})
+
+prev.addEventListener("click", () => {
+    if(i > 0 && i < images.length){
+        i--;
+        slide.src = images[i];
+        numText.innerHTML = `${i + 1} de ${images.length}`;
+        
+    } else {
+        i = images.length;
+    } 
+
+})
 
 
 window.onload = changeImg();

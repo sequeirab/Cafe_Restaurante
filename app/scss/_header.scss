@@ -42,12 +42,12 @@
   }
 
   &__toggle {
+    cursor: pointer;
     > span {
       display: block;
       background-color: black;
       width: 26px;
       height: 2px;
-      cursor: pointer;
     }
 
     > span:not(:last-child) {
@@ -67,6 +67,7 @@
   background-color: black;
   height: auto;
   text-align: center;
+  z-index: 1;
 
   > a {
     margin-bottom: 34px;

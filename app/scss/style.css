@@ -105,12 +105,15 @@ a:hover {
   padding-right: 10rem;
 }
 
+.header__toggle {
+  cursor: pointer;
+}
+
 .header__toggle > span {
   display: block;
   background-color: black;
   width: 26px;
   height: 2px;
-  cursor: pointer;
 }
 
 .header__toggle > span:not(:last-child) {
@@ -133,6 +136,7 @@ a:hover {
   background-color: black;
   height: auto;
   text-align: center;
+  z-index: 1;
 }
 
 .menu-block > a {
