@@ -210,7 +210,18 @@ a:hover {
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: 0.5fr auto;
       grid-template-rows: 0.5fr auto;
-      grid-template-areas: ".  titulo titulo ." "box1 box1  box2 box2";
+      grid-template-areas: ".  titulo titulo ." "image1 box1  image2 box2";
+  grid-gap: 5px;
+}
+
+@media (max-width: 39.9375em) {
+  .ementa__container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "titulo" "image1" "box1" "image2" "box2";
+  }
 }
 
 .ementa__titulo {
@@ -221,17 +232,51 @@ a:hover {
   text-align: center;
 }
 
-.ementa__box1 {
+.ementa__image1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  grid-area: image1;
+  text-align: center;
+}
+
+.ementa__image1 > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+  max-height: 50%;
+}
+
+.ementa__box1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: box1;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.ementa__image2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: image2;
+  text-align: center;
+}
+
+.ementa__image2 > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+  max-height: 50%;
 }
 
 .ementa__box2 {
   -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 4;
   grid-area: box2;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=style.css.map */

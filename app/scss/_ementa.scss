@@ -3,18 +3,47 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.5fr auto;
-    grid-template-areas: ".  titulo titulo ." "box1 box1  box2 box2";
+    grid-template-areas: ".  titulo titulo ." "image1 box1  image2 box2";
+    grid-gap: 5px;
+
+    @include breakpoint-down(small) {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: "titulo" "image1" "box1" "image2" "box2";
+    }
   }
   &__titulo {
     grid-area: titulo;
     text-align: center;
   }
 
+  &__image1 {
+    grid-area: image1;
+    text-align: center;
+    & > img {
+      object-fit: cover;
+      width: 50%;
+      max-height: 50%;
+    }
+  }
   &__box1 {
     grid-area: box1;
+    text-align: center;
+    align-self: center;
   }
 
+  &__image2 {
+    grid-area: image2;
+    text-align: center;
+    & > img {
+      object-fit: cover;
+      width: 50%;
+      max-height: 50%;
+    }
+  }
   &__box2 {
     grid-area: box2;
+    text-align: center;
+    align-self: center;
   }
 }
