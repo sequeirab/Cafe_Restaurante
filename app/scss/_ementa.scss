@@ -1,0 +1,20 @@
+.ementa {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr auto;
+    grid-template-areas: ".  titulo titulo ." "box1 box1  box2 box2";
+  }
+  &__titulo {
+    grid-area: titulo;
+    text-align: center;
+  }
+
+  &__box1 {
+    grid-area: box1;
+  }
+
+  &__box2 {
+    grid-area: box2;
+  }
+}

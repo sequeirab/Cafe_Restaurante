@@ -1,3 +1,4 @@
+// Variables
 const menu = document.getElementById('hamburgerMenu');
 const slide = document.querySelector("#slide");
 const numText = document.querySelector(".hero__numberText");
@@ -6,8 +7,8 @@ const next = document.querySelector("#next");
 let images = [];
 let time = 10000;
 let i = 0;
-let k = i;
 
+//Hamburger Menu
 menu.addEventListener('click', () => {
     const showMenu = document.querySelector('.menu-block');
     showMenu.classList.toggle('hide');
@@ -17,7 +18,6 @@ menu.addEventListener('click', () => {
 
 
 // Images
-
 images[0] = './images/slide1.jfif';
 images[1] = './images/slide2.png';
 images[2] = './images/slide3.png';
@@ -26,8 +26,8 @@ images[4] = './images/slide3.png';
 images[5] = './images/slide2.png';
 images[6] = './images/slide3.png';
 
-//Function to change image
 
+//Function to change image
 const changeImg = () => {
     
     if (i < images.length) {
@@ -38,20 +38,15 @@ const changeImg = () => {
         setTimeout(changeImg, time);
     }
     
-
-
     slide.src = images[i];
     numText.innerHTML = `${i + 1} de ${images.length}`;
    
-   
    i++;
-
-
-   
-    
     
 }
 
+
+// Changing to next image
 next.addEventListener("click", () => {
     if(i < images.length){
         slide.src = images[i];
@@ -63,6 +58,8 @@ next.addEventListener("click", () => {
 
 })
 
+
+//Changing to previous image
 prev.addEventListener("click", () => {
     if(i > 0 && i < images.length){
         i--;
