@@ -1,0 +1,48 @@
+.footer {
+  background-color: rgb(216, 211, 211);
+  &__links {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 0.2fr) 1.5fr 2fr;
+    grid-template-areas: "facebook mobile whatsapp email form map";
+  }
+  &__facebook {
+    grid-area: facebook;
+    > img {
+      width: 20px;
+      height: auto;
+    }
+  }
+  &__mobile {
+    grid-area: mobile;
+    > img {
+      width: 20px;
+      height: auto;
+    }
+  }
+  &__whatsapp {
+    grid-area: whatsapp;
+    > img {
+      width: 20px;
+      height: auto;
+    }
+  }
+  &__email {
+    grid-area: email;
+    > img {
+      width: 20px;
+      height: auto;
+    }
+  }
+
+  &__form {
+    grid-area: form;
+  }
+  &__map {
+    grid-area: map;
+    > iframe {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
