@@ -1,48 +1,48 @@
 .footer {
   background-color: rgb(216, 211, 211);
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr repeat(4, 0.5fr);
+  grid-template-areas: "map facebook mobile whatsapp email";
+  padding-top: 15px;
+
   &__links {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(4, 0.2fr) 1.5fr 2fr;
-    grid-template-areas: "facebook mobile whatsapp email form map";
   }
   &__facebook {
     grid-area: facebook;
+    align-self: end;
     > img {
-      width: 20px;
+      width: 25px;
       height: auto;
     }
   }
   &__mobile {
     grid-area: mobile;
+    align-self: end;
     > img {
-      width: 20px;
+      width: 25px;
       height: auto;
     }
   }
   &__whatsapp {
     grid-area: whatsapp;
+    align-self: end;
     > img {
-      width: 20px;
+      width: 25px;
       height: auto;
     }
   }
   &__email {
     grid-area: email;
+    align-self: end;
     > img {
-      width: 20px;
+      width: 25px;
       height: auto;
     }
   }
-
-  &__form {
-    grid-area: form;
-  }
   &__map {
     grid-area: map;
-    > iframe {
-      height: 100px;
-      width: 100px;
-    }
+    justify-self: center;
+    align-self: center;
   }
 }
